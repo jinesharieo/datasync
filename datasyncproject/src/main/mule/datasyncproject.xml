@@ -4,11 +4,11 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="43b9b9e7-2537-41fc-aaf1-bb1485aa1752" >
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="7b7f9902-9fe4-4a71-bfa7-aaf68e8f36c8" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
-	<flow name="datasyncFlow" doc:id="a92f1cd6-0201-4b2d-9132-8a02ab57418c" >
-		<http:listener doc:name="Listener" doc:id="d3d235f5-8a5a-447e-a37e-f4adc893866e" config-ref="HTTP_Listener_config" path="/datasync"/>
-		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="807a45d2-e55f-46b1-9f02-4518d7c96567" />
+	<flow name="datasyncprojectFlow" doc:id="1500b9ad-4f8b-4542-aae8-3123263b50a1" >
+		<http:listener doc:name="Listener" doc:id="c6917a8a-e149-47c1-9fac-cf733a2331c2" config-ref="HTTP_Listener_config" path="/datasync"/>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="c0665245-6fb7-4ad7-8aec-073e62145a1b" />
 	</flow>
 </mule>
